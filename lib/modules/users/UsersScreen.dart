@@ -1,6 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import '../../models/user_model.dart';
+
+
 class UsersScreen extends StatelessWidget {
    UsersScreen({Key? key}) : super(key: key);
 
@@ -80,15 +83,3 @@ class UsersScreen extends StatelessWidget {
   );
 }
 
-class UserModel{
-  final int id;
-  final String name;
-  final String phone;
-
-  UserModel({
-    required this.id,
-    required this.name,
-    required this.phone
-  });
-
-}

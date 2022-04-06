@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+import 'package:first_app_flutter/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class LoginScreen extends StatelessWidget {
@@ -59,20 +59,12 @@ class LoginScreen extends StatelessWidget {
                 const SizedBox(
                   height: 40.0,
                 ),
-                Container(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: MaterialButton(
-                    child: Text(
-                      'LOGIN',
-                    ),
-                    onPressed: () {
+                defaultButton(
+                    function: (){
                       print(emailController.text);
                       print(passwordController.text);
                     },
-                    color: Colors.blue,
-                    textColor: Colors.white,
-                  ),
+                    text: "Login"
                 ),
                 SizedBox(
                   height: 20.0,
