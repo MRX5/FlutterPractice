@@ -1,7 +1,13 @@
+import 'dart:developer';
+
+import 'package:first_app_flutter/bmi/BmiScreen.dart';
 import 'package:first_app_flutter/chats/ChatsScreen.dart';
 import 'package:first_app_flutter/home/HomeScreen.dart';
 import 'package:first_app_flutter/login/LoginScreen.dart';
+import 'package:first_app_flutter/users/UsersScreen.dart';
 import 'package:flutter/material.dart';
+
+import 'counter/CounterScreen.dart';
 
 void main() {
   runApp(FirstApp());
@@ -12,7 +18,7 @@ class FirstApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: ChatsScreen()
+      home: BmiScreen()
     );
   }
 
