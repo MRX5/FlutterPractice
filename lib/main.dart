@@ -23,7 +23,7 @@ class FirstApp extends StatelessWidget{
   Widget build(BuildContext context) {
     return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: CounterScreen()
+      home: HomeLayout()
     );
   }
 
