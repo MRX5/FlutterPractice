@@ -1,19 +1,29 @@
 import 'dart:developer';
 
-import 'package:first_app_flutter/Modules/bmi/BmiScreen.dart';
+import 'package:bloc/bloc.dart';
 import 'package:first_app_flutter/Modules/login/LoginScreen.dart';
+import 'package:first_app_flutter/layout/home_layout.dart';
+import 'package:first_app_flutter/modules/bmi/BmiScreen.dart';
+import 'package:first_app_flutter/modules/counter/CounterScreen.dart';
+import 'package:first_app_flutter/modules/home/HomeScreen.dart';
+import 'package:first_app_flutter/shared/bloc_observer.dart';
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(FirstApp());
+
+  BlocOverrides.runZoned((){
+    runApp(FirstApp());
+  },
+    blocObserver: MyBlocObserver()
+  );
 }
 
 class FirstApp extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return  MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: LoginScreen()
+      home: CounterScreen()
     );
   }
 

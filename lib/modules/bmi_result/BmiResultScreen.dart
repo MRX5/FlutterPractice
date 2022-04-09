@@ -25,7 +25,8 @@ class BmiResultScreen extends StatelessWidget {
             title: Text('BMI Result')),
         body: Center(
           child: Card(
-            elevation: 1,
+            elevation: 10,
+            shadowColor: Colors.white,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(10.0)
             ),

@@ -26,6 +26,7 @@ Widget defaultFormField({
       required String label,
       required String? Function(String?) validator,
       Function(String)? onSubmit,
+      Function()? onTap,
       TextInputType textInputType=TextInputType.text,
       bool obscureType=false,
       IconData? suffixIcon,
@@ -36,6 +37,7 @@ Widget defaultFormField({
       keyboardType: textInputType,
       obscureText: obscureType,
       onFieldSubmitted: onSubmit,
+      onTap: onTap,
       validator:validator,
       decoration:  InputDecoration(
           labelText: label,
@@ -48,4 +50,43 @@ Widget defaultFormField({
               onPressed: onSuffixIconTap,
           ),
     )
+);
+
+Widget buildTaskItem(Map task)=>Padding(
+  padding: const EdgeInsets.all(20),
+  child: Row(
+    children: [
+      CircleAvatar(
+        radius: 40,
+        child: Text(
+            '${task['time']}',
+            style: TextStyle(
+                fontSize: 15.0
+            )
+        ),
+      ),
+      SizedBox(
+        width: 20.0,
+      ),
+      Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Text(
+            '${task['title']}',
+            style: TextStyle(
+                fontSize: 16,
+                fontWeight: FontWeight.bold
+            ),
+          ),
+          Text(
+            '${task['date']}',
+            style: TextStyle(
+              fontSize: 14,
+            ),
+          ),
+        ],
+      )
+    ],
+  ),
 );
